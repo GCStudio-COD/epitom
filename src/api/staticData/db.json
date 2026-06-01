@@ -1,0 +1,50 @@
+{
+  "homepage": {
+    "data": {
+      "seo": {
+        "id": 5,
+        "metaTitle": "Excelledia - is a prominent business process",
+        "metaDescription": "Excelledia is a prominent business process improvement and performance management consulting firm that helps businesses become more profitable.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "HomeBanner",
+          "data": {
+            "title": "Advancing Hope Beyond Seizures",
+            "subtitle": "Integrating world-class neurosurgery, AI-driven diagnostics, and human-centric care to redefine the limits of clinical possibility.",
+            "find_center_link": {
+              "url": "/find-center",
+              "text": "Find Center"
+            },
+            "patient_resources_link": {
+              "url": "/patient-resources",
+              "text": "Patient Resources"
+            }
+          }
+        },
+        {
+          "widget_type": "HomeAbout",
+          "data": {}
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Learn more about our company and team here."
+  }
+}

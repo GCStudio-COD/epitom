@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #572a65;
+
+  --primary: #572a65;
+  --primary-hover: #431f4f;
+  --primary-foreground: #ffffff;
+
+  --secondary: #e687ec;
+  --secondary-hover: #d272d8;
+  --secondary-foreground: #1c0e24;
+
+  --accent: #e2e2ff;
+  --accent-foreground: #1c0e24;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-anton: var(--font-anton);
+
+  /* Custom Breakpoint */
+  --breakpoint-xxxl: 120rem;
+
+  /* Custom Typography Sizes */
+  --text-h1: 4.5rem;
+  --text-h2: 3rem;
+  --text-h3: 2.25rem;
+  --text-h4: 2.5rem;
+  --text-p: 1.125rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #110716;
+    --foreground: #f9f5fc;
+
+    --primary: #572a65;
+    --primary-hover: #f1b3f5;
+    --primary-foreground: #110716;
+
+    --secondary: #e687ec;
+    --secondary-hover: #c4c4ff;
+    --secondary-foreground: #110716;
+
+    --accent: #572a65;
+    --accent-foreground: #ffffff;
+  }
+}
+
+body {
+  /* background: var(--background); */
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@utility btn-primary {
+  @apply border inline-flex items-center justify-center font-semibold text-sm px-6 py-2.5 rounded-[14px] bg-primary text-white border border-primary transition-all duration-300 shadow-md hover:bg-transparent hover:text-primary hover:border-primary active:scale-98 cursor-pointer;
+}
+
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center font-semibold text-sm px-6 py-2.5 rounded-[14px] border border-neutral-300 dark:border-neutral-700 text-neutral-800 dark:text-neutral-200 bg-transparent hover:bg-neutral-50 dark:hover:bg-neutral-800/40 transition-all duration-300 active:scale-98 cursor-pointer;
+}
