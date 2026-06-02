@@ -12,6 +12,8 @@ const Header: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const diff = currentScrollY - lastScrollY.current;
+      const threshold = 8; // 8px buffer to prevent layout jitter
 
       // 1. Background appearance
       if (currentScrollY > 50) {
@@ -23,14 +25,16 @@ const Header: React.FC = () => {
       // 2. Show/Hide on scroll
       if (currentScrollY <= 10) {
         setIsVisible(true);
-      } else if (currentScrollY > lastScrollY.current) {
-        // Scrolling down
-        if (!isOpen) {
-          setIsVisible(false);
+      } else if (Math.abs(diff) > threshold) {
+        if (diff > 0) {
+          // Scrolling down
+          if (!isOpen) {
+            setIsVisible(false);
+          }
+        } else {
+          // Scrolling up
+          setIsVisible(true);
         }
-      } else {
-        // Scrolling up
-        setIsVisible(true);
       }
 
       lastScrollY.current = currentScrollY;

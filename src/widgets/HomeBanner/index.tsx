@@ -66,8 +66,8 @@ const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
             <div className="flex shrink-0 pb-2">
               <Button
                 href={data?.find_center_link?.url || "/find-center"}
-                variant="primary"
-                className="px-8 py-3.5 h-[50px] shadow-lg shadow-cyan-950/30 hover:shadow-cyan-950/50 transition-all duration-300 whitespace-nowrap"
+                variant="outline-white"
+                className="shadow-lg shadow-cyan-950/30 hover:shadow-cyan-950/50 transition-all duration-300 whitespace-nowrap"
               >
                 Find Care
               </Button>

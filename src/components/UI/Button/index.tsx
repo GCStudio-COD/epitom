@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 interface BaseButtonProps {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "outline-white";
   children: React.ReactNode;
   className?: string;
 }
@@ -28,7 +28,12 @@ const Button: React.FC<ButtonProps> = ({
   href,
   ...props
 }) => {
-  const baseClasses = variant === "primary" ? "btn-primary" : "btn-secondary";
+  const baseClasses =
+    variant === "primary"
+      ? "btn-primary"
+      : variant === "outline-white"
+      ? "btn-outline-white"
+      : "btn-secondary";
   const combinedClasses = `${baseClasses} ${className}`.trim();
 
   if (href !== undefined) {

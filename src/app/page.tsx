@@ -1,6 +1,10 @@
 import { log } from "console";
-import WidgetBlocks from "../utilities/WidgetBlock";
 import nextFetch from "../utilities/nextFetch";
+import HomeBanner from "@/src/widgets/HomeBanner";
+import HomeAbout from "@/src/widgets/HomeAbout";
+import ClinicalServices from "@/src/widgets/ClinicalServices";
+import Approach from "@/src/widgets/Approach";
+import EpitomeNetwork from "@/src/widgets/EpitomeNetwork";
 
 export async function generateMetadata({ params }: { params: any }) {
   const data = await nextFetch(`api/general/homepage`);
@@ -17,19 +21,24 @@ export async function generateMetadata({ params }: { params: any }) {
   };
 }
 
-
-
 export default async function Home() {
   const data = await nextFetch("api/general/homepage");
-
-
-
+  const widgets = data?.data?.widgets || [];
+  const bannerWidget = widgets.find((w: any) => w.widget_type === "HomeBanner");
 
   return (
     <main>
-      {data && (
+      {/* WidgetBlocks dynamically rendered widgets hidden as requested */}
+      {/* {data && (
         <WidgetBlocks widgets={data?.data?.widgets}></WidgetBlocks>
-      )}
+      )} */}
+
+      <HomeBanner data={bannerWidget?.data} />
+      <HomeAbout />
+      <ClinicalServices />
+      <Approach />
+      <EpitomeNetwork />
     </main>
   );
 }
+

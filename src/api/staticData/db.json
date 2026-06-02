@@ -39,6 +39,14 @@
         {
           "widget_type": "HomeAbout",
           "data": {}
+        },
+        {
+          "widget_type": "ClinicalServices",
+          "data": {}
+        },
+        {
+          "widget_type": "Approach",
+          "data": {}
         }
       ]
     }
