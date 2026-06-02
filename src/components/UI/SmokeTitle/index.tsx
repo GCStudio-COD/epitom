@@ -69,7 +69,7 @@ const SmokeTitle: React.FC<SmokeTitleProps> = ({ text, tag = "h2", className = "
             return (
               <span
                 key={wordIdx}
-                className={`inline-block whitespace-nowrap ${isHighlighted ? "text-primary" : ""}`}
+                className={`inline-block whitespace-nowrap ${isHighlighted ? "text-[#E1B77E]" : ""}`}
               >
                 {cleanWord.split("").map((char, charIdx) => (
                   <span key={charIdx} className="smoke-letter inline-block origin-center">
