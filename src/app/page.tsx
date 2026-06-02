@@ -1,4 +1,3 @@
-import { log } from "console";
 import nextFetch from "../utilities/nextFetch";
 import HomeBanner from "@/src/widgets/HomeBanner";
 import HomeAbout from "@/src/widgets/HomeAbout";
