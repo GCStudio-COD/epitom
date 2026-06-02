@@ -120,7 +120,8 @@ const ClinicalServices: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-5 [clip-path:inset(0)] w-full bg-white text-neutral-900 h-[70vh] lg:h-[70vh] flex flex-col justify-center font-sans overflow-hidden"
+      id="services"
+      className="relative z-5 [clip-path:inset(0)] w-full bg-white text-neutral-900 h-[50vh] min-h-[450px] lg:h-[70vh] flex flex-col justify-center font-sans overflow-hidden"
     >
       {/* Light ambience glows */}
       <div className="absolute inset-0 bg-[radial-gradient(#00000002_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />

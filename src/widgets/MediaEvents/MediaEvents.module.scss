@@ -1,0 +1,30 @@
+.noScrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+:global(.swiper-slide) {
+  height: auto !important;
+  display: flex;
+}
+
+:global(.swiper-custom-pagination) :global(.swiper-pagination-bullet) {
+  background: #333333;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s;
+  border-radius: 9999px;
+}
+
+:global(.swiper-custom-pagination) :global(.swiper-pagination-bullet-active) {
+  background: #E1B77E;
+  width: 24px;
+}
+
+.section {
+  background-color: #6e4e47 !important;
+}

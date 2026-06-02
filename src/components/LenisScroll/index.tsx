@@ -39,7 +39,7 @@ const ScrollTriggerSync: React.FC = () => {
 
 const LenisScroll: React.FC<LenisScrollProps> = ({ children }) => {
   const options = {
-    duration: 1.2,
+    duration: 1.0,
     easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     direction: "vertical" as const,
     gestureDirection: "vertical" as const,

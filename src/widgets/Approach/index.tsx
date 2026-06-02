@@ -98,7 +98,7 @@ const Approach: React.FC = () => {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="swiper-card shrink-0 w-full lg:w-[calc((100%-72px)/4)] snap-align-start bg-white border border-[#C2C1C0] hover:border-primary/40 rounded-[40px] p-8 flex flex-col items-center justify-between text-center transition-all duration-300 hover:bg-primary/5 group cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_rgba(87,42,101,0.06)] h-[340px]"
+              className="swiper-card shrink-0 w-[83.33%] lg:w-[calc((100%-72px)/4)] snap-align-start bg-white border border-[#C2C1C0] hover:border-primary/40 rounded-[40px] p-8 flex flex-col items-center justify-between text-center transition-all duration-300 hover:bg-primary/5 group cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_35px_rgba(87,42,101,0.06)] h-[340px]"
             >
               {/* Badge (Top Left aligned naturally via flexbox or absolute positioning within relative card bounds) */}
               <div className="w-full flex justify-start mb-4">

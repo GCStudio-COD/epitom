@@ -3,6 +3,7 @@ import Link from "next/link";
 
 interface BaseButtonProps {
   variant?: "primary" | "secondary" | "outline-white";
+  size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   className?: string;
 }
@@ -23,6 +24,7 @@ type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 const Button: React.FC<ButtonProps> = ({
   variant = "primary",
+  size = "md",
   children,
   className = "",
   href,
@@ -34,13 +36,19 @@ const Button: React.FC<ButtonProps> = ({
       : variant === "outline-white"
       ? "btn-outline-white"
       : "btn-secondary";
-  const combinedClasses = `${baseClasses} ${className}`.trim();
+  const sizeClasses =
+    size === "sm"
+      ? "btn-sm"
+      : size === "lg"
+      ? "btn-lg"
+      : "btn-md";
+  const combinedClasses = `${baseClasses} ${sizeClasses} ${className}`.trim();
 
   if (href !== undefined) {
     return (
       <Link
         href={href}
-        className={`h-[50px] ${combinedClasses}`}
+        className={combinedClasses}
         {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}

@@ -38,7 +38,7 @@ $base-size: 16;
             font-weight: 700;
 
             &:not(.ttl) {
-                @apply text-[30px] sm:text-[30px] lg:text-[40px] xxxl:text-h2;
+                @apply text-[40px] sm:text-[30px] lg:text-[40px] xxxl:text-h2;
             }
         }
 

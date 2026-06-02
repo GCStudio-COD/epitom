@@ -21,32 +21,39 @@ interface HomeBannerProps {
 }
 
 const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
-  const title = data?.title || "Advancing Hope Beyond Seizures";
-  const subtitle = data?.subtitle || "Integrating world-class neurosurgery, AI-driven diagnostics, and human-centric care to redefine the limits of clinical possibility.";
-  const bannerRef = useRef<HTMLDivElement>(null);
+  const title = data?.title || "Redefining Epilepsy Care";
+  const subtitle = data?.subtitle || "Advanced diagnostics, world-class epilepsy surgery, AI-powered support, and a nationwide network dedicated to helping people live seizure-free.";
+  const bgRef = useRef<HTMLDivElement>(null);
 
-  // Smooth parallax scroll using Lenis
+  // Smooth parallax scroll using Lenis (applied to background wrapper only for high performance)
   useLenis(({ scroll }) => {
-    if (bannerRef.current) {
-      bannerRef.current.style.transform = `translate3d(0, -${scroll * 0.35}px, 0)`;
+    if (bgRef.current) {
+      bgRef.current.style.transform = `translate3d(0, -${scroll * 0.35}px, 0)`;
     }
   });
 
   return (
     <div
-      ref={bannerRef}
-      className="sticky top-0 w-full h-screen bg-cover bg-center bg-no-repeat z-0 will-change-transform font-sans"
+      id="home"
+      className="sticky top-0 w-full h-screen z-0 font-sans overflow-hidden"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop')`,
         fontFamily: "'Figtree', 'Noto Sans', sans-serif"
       }}
     >
+      {/* Parallax Background Layer */}
+      <div
+        ref={bgRef}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform scale-125"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop')`,
+        }}
+      />
       {/* Premium dark medical-gradient overlay for rich depth and contrast */}
       <div className="absolute inset-0 bg-linear-to-r from-neutral-950 via-neutral-900/80 to-transparent z-1" />
       <div className="absolute inset-0 bg-neutral-950/20 z-1" />
 
       {/* Content wrapper - left aligned */}
-      <div className="absolute inset-0 flex flex-col justify-end pb-20 md:pb-28 z-10 [&>.container]:my-0">
+      <div className="absolute inset-0 flex flex-col justify-end pb-20 md:pb-20 z-10 [&>.container]:my-0">
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 text-white">
             <div className="flex flex-col items-start text-left space-y-6 max-w-full md:max-w-[60%]">
@@ -67,6 +74,7 @@ const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
               <Button
                 href={data?.find_center_link?.url || "/find-center"}
                 variant="outline-white"
+                size="lg"
                 className="shadow-lg shadow-cyan-950/30 hover:shadow-cyan-950/50 transition-all duration-300 whitespace-nowrap"
               >
                 Find Care

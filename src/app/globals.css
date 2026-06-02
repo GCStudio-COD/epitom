@@ -78,3 +78,15 @@ body {
 @utility btn-outline-white {
   @apply inline-flex items-center justify-center font-semibold text-sm px-[45px] py-[15px] rounded-[300px] border border-white text-white bg-transparent hover:bg-white hover:text-neutral-950 transition-all duration-300 active:scale-98 cursor-pointer;
 }
+
+@utility btn-sm {
+  @apply h-[40px] px-[25px] py-0 text-xs;
+}
+
+@utility btn-md {
+  @apply h-[50px] px-[35px] py-0 text-sm;
+}
+
+@utility btn-lg {
+  @apply h-[60px] px-[45px] py-0 text-base md:h-[64px] md:px-[50px] md:text-lg;
+}

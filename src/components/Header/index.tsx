@@ -16,7 +16,8 @@ const Header: React.FC = () => {
       const threshold = 8; // 8px buffer to prevent layout jitter
 
       // 1. Background appearance
-      if (currentScrollY > 50) {
+      const triggerHeight = window.innerHeight * 0.3;
+      if (currentScrollY > triggerHeight) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -47,10 +48,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-            ? "bg-neutral-950/80 backdrop-blur-md py-4"
-            : "bg-transparent py-6"
-          } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled ? "bg-gradient-to-b from-[#6e4e47] to-transparent py-4" : "bg-transparent py-6"} ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
       >
         <div className="container flex items-center justify-between w-full">
           {/* Logo */}
@@ -58,14 +56,14 @@ const Header: React.FC = () => {
             <img
               src="/logo.png"
               alt="Logo"
-              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </Link>
 
           {/* Animated Hamburger Icon */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-50 flex flex-col justify-between w-6 h-5 bg-transparent border-none cursor-pointer focus:outline-hidden group"
+            className="relative z-50 flex flex-col justify-between w-6 h-4 bg-transparent border-none cursor-pointer focus:outline-hidden group"
             aria-label="Toggle Menu"
           >
             <span
@@ -127,6 +125,38 @@ const Header: React.FC = () => {
           <p>© {new Date().getFullYear()} Elite Neurosurgical Center. All rights reserved.</p>
         </div>
       </div>
+
+      {/* Floating Bottom Navigation Bar for Mobile */}
+      {!isOpen && (
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[420px] bg-neutral-950/90 backdrop-blur-lg border border-white/10 rounded-full shadow-2xl px-3 py-2 flex items-center justify-between z-50 md:hidden transition-all duration-300">
+          {/* Home Link */}
+          <a
+            href="#home"
+            className="flex items-center justify-center w-11 h-11 rounded-full bg-white/5 border border-white/10 text-white/80 hover:text-white hover:bg-white/10 transition-all cursor-pointer shrink-0"
+            aria-label="Home"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </a>
+
+          {/* Find Care Button */}
+          <a
+            href="#network"
+            className="flex-1 mx-2 py-2.5 rounded-full text-center text-xs font-bold uppercase tracking-wider bg-white/10 border border-white/10 text-white hover:bg-white/20 hover:border-white/20 transition-all cursor-pointer"
+          >
+            Find Care
+          </a>
+
+          {/* Ask Epilu Button */}
+          <a
+            href="/ask-epilu"
+            className="flex-1 py-2.5 rounded-full text-center text-xs font-bold uppercase tracking-wider bg-[#E1B77E] border border-[#E1B77E] text-neutral-950 hover:bg-[#d0a66d] hover:border-[#d0a66d] transition-all cursor-pointer"
+          >
+            Ask Epilu
+          </a>
+        </div>
+      )}
     </>
   );
 };

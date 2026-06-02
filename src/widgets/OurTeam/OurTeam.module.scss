@@ -1,0 +1,60 @@
+.marqueeContainer {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  padding: 40px 0;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marqueeAnimation 35s linear infinite;
+  
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.marqueeCard {
+  flex-shrink: 0;
+  width: 240px;
+  margin: 0 15px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--background);
+  text-align: center;
+  padding-bottom: 20px;
+  
+  :global(.dark) & {
+    background: #170b1e;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+  }
+  
+  h3 {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--foreground);
+    padding: 0 10px;
+    
+    :global(.dark) & {
+      color: #ffffff;
+    }
+  }
+}
