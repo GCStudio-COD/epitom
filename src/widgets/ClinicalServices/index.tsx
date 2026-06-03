@@ -8,50 +8,53 @@ interface ServiceItem {
   description: string;
   icon: React.ReactNode;
   className?: string;
+  isHorizontal?: boolean;
 }
 
 const services: ServiceItem[] = [
   {
     title: "Drug-resistant epilepsy",
     description: "Advanced diagnostic and therapeutic approaches for difficult-to-control seizures.",
-    icon: <img src="/icons/Drug-Resistant%20Epilepsy.svg" alt="Drug-resistant epilepsy" className="w-10 h-10 md:w-12 md:h-12 object-contain" />,
+    icon: <img src="/icons/Drug-Resistant%20Epilepsy.svg" alt="Drug-resistant epilepsy" className="w-12 h-12 md:w-16 md:h-16 object-contain" />,
     className: "md:col-span-2 md:row-span-2"
   },
   {
     title: "Pediatric epilepsy",
-    description: "Specialized care and comprehensive treatments tailored for children and infants.",
-    icon: <img src="/icons/Pediatric%20Epilepsy.svg" alt="Pediatric epilepsy" className="w-10 h-10 md:w-12 md:h-12 object-contain" />,
+    description: "Specialized treatments tailored for children.",
+    icon: <img src="/icons/Pediatric%20Epilepsy.svg" alt="Pediatric epilepsy" className="w-12 h-12 md:w-16 md:h-16 object-contain" />,
     className: "md:col-span-1"
   },
   {
     title: "Epilepsy surgery",
-    description: "State-of-the-art surgical interventions to reduce or eliminate seizure activity.",
-    icon: <img src="/icons/Epilepsy%20Surgery.svg" alt="Epilepsy surgery" className="w-10 h-10 md:w-12 md:h-12 object-contain" />,
+    description: "Advanced surgical interventions to eliminate seizures.",
+    icon: <img src="/icons/Epilepsy%20Surgery.svg" alt="Epilepsy surgery" className="w-12 h-12 md:w-16 md:h-16 object-contain" />,
     className: "md:col-span-1"
   },
   {
     title: "SEEG",
     description: "Minimally invasive stereoelectroencephalography for precise seizure mapping.",
-    icon: <img src="/icons/SEEG.svg" alt="SEEG" className="w-10 h-10 md:w-12 md:h-12 object-contain" />,
-    className: "md:col-span-2"
+    icon: <img src="/icons/SEEG.svg" alt="SEEG" className="w-12 h-12 md:w-16 md:h-16 object-contain" />,
+    className: "md:col-span-2",
+    isHorizontal: true
   },
   {
     title: "Neuro-modulation",
-    description: "Cutting-edge device therapies including VNS and DBS for seizure management.",
-    icon: <img src="/icons/Neuro-modulation.svg" alt="Neuro-modulation" className="w-10 h-10 md:w-12 md:h-12 object-contain" />,
+    description: "Device therapies like VNS and DBS for seizures.",
+    icon: <img src="/icons/Neuro-modulation.svg" alt="Neuro-modulation" className="w-12 h-12 md:w-16 md:h-16 object-contain" />,
     className: "md:col-span-1"
   },
   {
     title: "Rehabilitation",
-    description: "Holistic support focused on cognitive and physical recovery post-treatment.",
-    icon: <img src="/icons/Rehabilitation.svg" alt="Rehabilitation" className="w-10 h-10 md:w-12 md:h-12 object-contain" />,
+    description: "Support for cognitive and physical recovery.",
+    icon: <img src="/icons/Rehabilitation.svg" alt="Rehabilitation" className="w-12 h-12 md:w-16 md:h-16 object-contain" />,
     className: "md:col-span-1"
   },
   {
     title: "Ketogenic therapy",
     description: "Expertly guided dietary treatments to manage epilepsy naturally and effectively.",
-    icon: <img src="/icons/Ketogenic%20Therapy.svg" alt="Ketogenic therapy" className="w-10 h-10 md:w-12 md:h-12 object-contain" />,
-    className: "md:col-span-2"
+    icon: <img src="/icons/Ketogenic%20Therapy.svg" alt="Ketogenic therapy" className="w-12 h-12 md:w-16 md:h-16 object-contain" />,
+    className: "md:col-span-2",
+    isHorizontal: true
   },
 ];
 
@@ -81,17 +84,18 @@ const ClinicalServices: React.FC = () => {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[280px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[220px]">
           {services.map((service) => (
             <div
               key={service.title}
-              className={`bg-neutral-50 rounded-[32px] p-8 border border-neutral-200 hover:shadow-2xl hover:border-neutral-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group cursor-pointer overflow-hidden relative will-change-transform ${service.className || ""}`}
+              className={`bg-neutral-50 rounded-[32px] p-5 border border-neutral-200 hover:shadow-2xl hover:border-neutral-300 hover:-translate-y-1 transition-all duration-300 flex group cursor-pointer overflow-hidden relative will-change-transform ${service.isHorizontal ? "flex-col md:flex-row items-start md:items-center gap-6" : "flex-col justify-between"
+                } ${service.className || ""}`}
             >
               {/* Subtle gradient hover effect on card */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-transparent transition-colors duration-500 pointer-events-none" />
-              
+
               {/* Header */}
-              <div className="mb-4 relative z-10">
+              <div className={`${service.isHorizontal ? "mb-0 shrink-0" : "mb-4"} relative z-10`}>
                 {/* Icon Box */}
                 <div className="inline-block p-3.5 rounded-2xl bg-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-md will-change-transform">
                   {service.icon}
@@ -103,7 +107,7 @@ const ClinicalServices: React.FC = () => {
                 <h3 className="text-xl md:text-2xl font-bold text-neutral-800 group-hover:text-[#572a65] transition-colors leading-tight mb-2">
                   {service.title}
                 </h3>
-                <p className="text-sm text-neutral-500 font-light mb-[5px]">
+                <p className="text-[13px] text-black font-light mb-[5px]">
                   {service.description}
                 </p>
               </div>

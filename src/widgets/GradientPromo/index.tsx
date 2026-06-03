@@ -52,8 +52,8 @@ const GradientPromo = () => {
           trigger: sectionRef.current,
           start: "top top",
           toggleActions: "play none none reverse",
-          onEnter: () => {},
-          onLeaveBack: () => {}
+          onEnter: () => { },
+          onLeaveBack: () => { }
         }
       });
 
@@ -128,8 +128,8 @@ const GradientPromo = () => {
   return (
     <section ref={sectionRef} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[linear-gradient(to_right,var(--color-secondary)_0%,var(--color-primary)_60%)]">
       {/* Top Center Epilu Text */}
-      <div className="absolute top-[30px] md:top-[50px] left-0 w-full flex flex-col items-center justify-center z-20 pointer-events-none gap-4">
-        <h2 ref={meetTextRef} className="text-3xl md:text-3xl font-normal text-white tracking-wide">Meet.</h2>
+      <div className="absolute top-[30px] md:top-[100px] left-0 w-full flex flex-col items-center justify-center z-0 pointer-events-none gap-4">
+        <h2 ref={meetTextRef} className="text-3xl md:text-3xl font-light text-white tracking-wide">Meet.</h2>
         <div ref={svgTextContainerRef} className="w-[80%] sm:w-[50%] md:w-[19%] lg:w-[19%] xxl:w-[25%] flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" id="Layer_1" version="1.1" viewBox="0 0 1098.9 476.6" className="w-full h-auto object-contain">
             <defs>

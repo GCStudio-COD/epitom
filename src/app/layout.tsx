@@ -17,6 +17,11 @@ const axiforma = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../../public/font/Axiforma-Thin.ttf",
+      weight: "200",
+      style: "normal",
+    },
   ],
   variable: "--font-axiforma",
   display: "swap",
