@@ -9,26 +9,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 pb-12">
-          
+
           {/* Brand Column (Left) */}
           <div className="md:col-span-4 flex flex-col space-y-6">
             {/* Logo and Name */}
             <div className="flex items-center">
-              {/* Custom neural-blossom logo inspired by Serenity Minds floral logo */}
-              <div className="relative flex items-center justify-center w-10 h-10 mr-3 shrink-0">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <circle cx="50" cy="35" r="13" fill="#e687ec" className="opacity-70 dark:opacity-60" />
-                  <circle cx="63" cy="42" r="13" fill="#572a65" className="opacity-70 dark:opacity-60" />
-                  <circle cx="63" cy="58" r="13" fill="#e687ec" className="opacity-70 dark:opacity-60" />
-                  <circle cx="50" cy="65" r="13" fill="#572a65" className="opacity-70 dark:opacity-60" />
-                  <circle cx="37" cy="58" r="13" fill="#e687ec" className="opacity-70 dark:opacity-60" />
-                  <circle cx="37" cy="42" r="13" fill="#572a65" className="opacity-70 dark:opacity-60" />
-                  <circle cx="50" cy="50" r="11" fill="#572a65" className="dark:fill-[#e687ec]" />
-                </svg>
-              </div>
-              <span className="text-2xl md:text-3xl font-serif font-semibold tracking-tight text-[#1C0E24] dark:text-neutral-100">
-                Epitome
-              </span>
+              <img src="/logo.png" alt="Epitome Logo" className="h-10 w-auto mr-3" />
+
             </div>
 
             {/* Description */}
@@ -108,10 +95,6 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {[
                 { label: "Home", href: "/" },
-                { label: "About Us", href: "/about" },
-                { label: "Services", href: "/services" },
-                { label: "Pricing", href: "/pricing" },
-                { label: "Testimonials", href: "/testimonials" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -179,10 +162,10 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 text-sm text-[#9C897B] dark:text-neutral-500 font-light tracking-wide space-y-4 sm:space-y-0">
           <div>
-            SINCE. 2025
+            &copy; {new Date().getFullYear()} Epitome. All rights reserved.
           </div>
           <div>
-            &copy; {new Date().getFullYear()} Epitome. All rights reserved.
+            Design by GC Studio
           </div>
         </div>
       </div>
