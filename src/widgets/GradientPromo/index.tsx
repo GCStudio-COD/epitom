@@ -128,9 +128,9 @@ const GradientPromo = () => {
   return (
     <section ref={sectionRef} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[linear-gradient(to_right,var(--color-secondary)_0%,var(--color-primary)_60%)]">
       {/* Top Center Epilu Text */}
-      <div className="absolute top-[30px] md:top-[100px] left-0 w-full flex flex-col items-center justify-center z-0 pointer-events-none gap-4">
-        <h2 ref={meetTextRef} className="text-3xl md:text-3xl font-light text-white tracking-wide">Meet.</h2>
-        <div ref={svgTextContainerRef} className="w-[80%] sm:w-[50%] md:w-[19%] lg:w-[19%] xxl:w-[25%] flex justify-center">
+      <div className="absolute top-[30px] md:top-[25%] left-0 w-full flex flex-col items-center justify-center z-0 pointer-events-none gap-4">
+        <h2 ref={meetTextRef} className="text-3xl md:text-5xl font-light text-white tracking-wide">Meet.</h2>
+        <div ref={svgTextContainerRef} className="w-[80%] sm:w-[50%] md:w-[19%] lg:w-[25%] xxl:w-[25%] flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" id="Layer_1" version="1.1" viewBox="0 0 1098.9 476.6" className="w-full h-auto object-contain">
             <defs>
               <style>
@@ -191,17 +191,17 @@ const GradientPromo = () => {
 
 
 
-      <div ref={epiluRef} style={{ opacity: 0 }} className="absolute bottom-[-130px] lg:bottom-[-90px] xxl:bottom-[-130px] left-0 w-full flex justify-center items-end z-10 pointer-events-none will-change-transform">
+      <div ref={epiluRef} style={{ opacity: 0 }} className="absolute bottom-[-130px] lg:bottom-[-120px] xxl:bottom-[-130px] left-0 w-full flex justify-center items-end z-10 pointer-events-none will-change-transform">
         <img
           src="/groups/epilu.png"
           alt="Epilu"
-          className="w-[70%] md:w-[40%] xxl:w-[48%] object-contain relative z-10"
+          className="w-[70%] md:w-[48%] xxl:w-[48%] object-contain relative z-10"
         />
         <img
           ref={nurveRef}
           src="/groups/nerve.png"
           alt="Nurve"
-          className="absolute w-[40%] md:w-[7%] xxl:w-[8%] object-contain z-10 top-[23%] right-[29%] xxl:top-[23%] xxl:right-[30%] will-change-transform"
+          className="absolute w-[40%] md:w-[7%] xxl:w-[8%] object-contain z-10 top-[25%] right-[26%] xxl:top-[23%] xxl:right-[30%] will-change-transform"
           style={{ opacity: 0 }}
         />
         {/* <img
@@ -209,7 +209,7 @@ const GradientPromo = () => {
           alt="Nurve"
           className="absolute w-[80%] md:w-[40%] object-contain z-0 top-[-120px] left-[50%] translate-x-[-50%]"
         /> */}
-        <div ref={headlineRef} style={{ opacity: 0 }} className="absolute w-[80%] md:w-[33%] lg:w-[36%] xxl:w-[40%] object-contain z-0 lg:top-[-90px] xxl:top-[-140px] left-[47%] translate-x-[-50%] will-change-transform">
+        <div ref={headlineRef} style={{ opacity: 0 }} className="absolute w-[80%] md:w-[33%] lg:w-[40%] xxl:w-[40%] object-contain z-0 lg:top-[-220px] xxl:top-[-140px] left-[47%] translate-x-[-50%] will-change-transform">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" viewBox="0 0 779 347" fill="none">
             <defs>
               <linearGradient id="flowing-gradient" x1="0%" y1="0%" x2="200%" y2="0%">
