@@ -357,24 +357,29 @@ const EpitomeNetwork: React.FC = () => {
       </div>
 
       {/* Find Location CTA */}
-      <div className="absolute bottom-0 sm:bottom-16 left-0 right-0 z-20 flex flex-col items-start sm:items-center px-8 sm:px-6">
-        {/* Mobile-only descriptive text */}
-        <div className="block sm:hidden text-left max-w-[340px] mb-4">
-          <p className="text-xs font-bold text-neutral-800 uppercase tracking-wider mb-6">
-            India's Connected Epilepsy Network
-          </p>
-          <p className="text-[12px] text-neutral-500 font-normal leading-normal">
-            The Epitome is a connected care network bringing together advanced epilepsy expertise, specialized diagnostics, multidisciplinary teams, and continuous innovation to improve access to high-quality epilepsy care.
-          </p>
-        </div>
+      <div className="absolute bottom-10 sm:bottom-16 left-0 right-0 z-20 container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 w-full">
+          {/* Left side text */}
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4">
+              India's Connected Epilepsy Network
+            </p>
+            <p className="text-base font-light text-neutral-900 leading-relaxed">
+              The Epitome is a connected care network bringing together advanced epilepsy expertise, specialized diagnostics, multidisciplinary teams, and continuous innovation to improve access to high-quality epilepsy care.
+            </p>
+          </div>
 
-        <Button
-          onClick={handleFindLocation}
-          variant="primary"
-          className=""
-        >
-          Find Center
-        </Button>
+          {/* Right side buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0 mt-6 lg:mt-0">
+            <Button
+              onClick={handleFindLocation}
+              variant="primary"
+              size="lg"
+            >
+              Find Center
+            </Button>
+          </div>
+        </div>
       </div>
 
       {/* Geolocation Results Modal */}
