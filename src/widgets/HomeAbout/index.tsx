@@ -36,9 +36,9 @@ const HomeAbout: React.FC = () => {
             <div className="flex w-max animate-marquee opacity-80 hover:opacity-100 transition-opacity duration-300 will-change-transform">
               {/* Group 1 */}
               <div className="flex items-center justify-center gap-16 md:gap-24 px-8 md:px-12">
-                <img src="/partners/INDIAN INSTITUTE OF TECHNOLOGY MADRAS 2001.svg" alt="IIT Madras" className="h-20 md:h-28 w-auto object-contain" />
+                <img src="/partners/INDIAN INSTITUTE OF TECHNOLOGY MADRAS 2001.jpeg" alt="IIT Madras" className="h-20 md:h-28 w-auto object-contain" />
                 <img src="/partners/NIT 2001.svg" alt="NIT" className="h-16 md:h-24 w-auto object-contain" />
-                <img src="/partners/PENN 2001.svg" alt="Penn" className="h-20 md:h-28 w-auto object-contain" />
+                <img src="/partners/PENN 2001.jpeg" alt="Penn" className="h-20 md:h-28 w-auto object-contain" />
                 <img src="/partners/SEIN 2001.svg" alt="SEIN" className="h-20 md:h-28 w-auto object-contain" />
                 <img src="/partners/STONY BROOK 2001 .SVG" alt="Stony Brook" className="h-20 md:h-28 w-auto object-contain" />
               </div>
