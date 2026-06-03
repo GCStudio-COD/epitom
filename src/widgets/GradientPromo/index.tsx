@@ -126,7 +126,7 @@ const GradientPromo = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[linear-gradient(to_right,var(--color-secondary)_0%,var(--color-primary)_60%)]">
+    <section ref={sectionRef} className="relative lg:h-[696px] xxl:h-screen w-full flex items-center justify-center overflow-hidden bg-[linear-gradient(to_right,var(--color-secondary)_0%,var(--color-primary)_60%)]">
       {/* Top Center Epilu Text */}
       <div className="absolute top-[30px] md:top-[10%] left-0 w-full flex flex-col items-center justify-center z-0 pointer-events-none gap-4">
         <h2 ref={meetTextRef} className="text-3xl md:text-5xl font-light text-white tracking-wide">Meet.</h2>
@@ -184,10 +184,10 @@ const GradientPromo = () => {
       <div ref={frame3Ref} style={{ opacity: 0 }} className="absolute inset-0 w-full h-full pointer-events-none will-change-transform">
         <img src="/groups/bg_frame_03.png" alt="" className="w-full h-full object-cover" />
       </div>
-
+      {/* 
       <div ref={frame4Ref} style={{ opacity: 0 }} className="absolute inset-0 w-full h-full pointer-events-none will-change-transform">
         <img src="/groups/bg_frame_04.png" alt="" className="w-full h-full object-cover" />
-      </div>
+      </div> */}
 
 
 
