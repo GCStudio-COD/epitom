@@ -45,7 +45,7 @@ const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
         ref={bgRef}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform scale-125"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop')`,
+          backgroundImage: `url('/banner.jpeg')`,
         }}
       />
       {/* Premium dark medical-gradient overlay for rich depth and contrast */}

@@ -7,6 +7,7 @@ import EpitomeNetwork from "@/src/widgets/EpitomeNetwork";
 import MediaEvents from "@/src/widgets/MediaEvents";
 import OurTeam from "@/src/widgets/OurTeam";
 import GradientPromo from "@/src/widgets/GradientPromo";
+import AskEpilu from "@/src/widgets/AskEpilu";
 
 export async function generateMetadata({ params }: { params: any }) {
   const data = await nextFetch(`api/general/homepage`);
@@ -41,6 +42,7 @@ export default async function Home() {
       </div>
       <ClinicalServices />
       <GradientPromo />
+      <AskEpilu />
       <Approach />
       <EpitomeNetwork />
       <OurTeam />

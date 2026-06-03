@@ -123,32 +123,7 @@ const GradientPromo = () => {
         <img src="/groups/bg_frame_04.png" alt="" className="w-full h-full object-cover" />
       </div>
 
-      {/* Content Layer */}
-      <div className="absolute top-[15%] md:top-[25%] left-0 w-full z-20 px-6">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 max-w-6xl mx-auto">
-            {/* Left side text */}
-            <div className="max-w-2xl">
-              <p className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed font-sans drop-shadow-md">
-                Your AI companion for epilepsy awareness, guidance, and support—available anytime through WhatsApp.
-              </p>
-            </div>
-            
-            {/* Right side buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <button className="px-8 py-4 bg-white text-neutral-950 rounded-full font-bold text-sm tracking-wide shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] hover:scale-105 transition-all duration-300">
-                Ask Epilu
-              </button>
-              <button className="px-8 py-4 bg-transparent border border-white/30 text-white rounded-full font-bold text-sm tracking-wide hover:bg-white/10 hover:border-white transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                Watch Story
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       <div ref={epiluRef} style={{ opacity: 0 }} className="absolute bottom-[-130px] lg:bottom-[-110px] xxl:bottom-[-130px] left-0 w-full flex justify-center items-end z-10 pointer-events-none">
         <img
