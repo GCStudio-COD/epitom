@@ -13,7 +13,7 @@ const HomeAbout: React.FC = () => {
         <div className="max-w-4xl mb-12 md:mb-24 lg:mb-32">
           <SmokeTitle
             tag="h2"
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.5rem] font-bold tracking-tighter text-neutral-900 leading-[1.05] md:leading-[1]"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-[6rem] font-bold tracking-tighter text-neutral-900 leading-[1.05] md:leading-[1]"
             text={"Hope Beyond\n[Seizures]"}
           />
         </div>

@@ -21,7 +21,7 @@ interface HomeBannerProps {
 }
 
 const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
-  const title = data?.title || "Redefining Epilepsy Care";
+  const title = data?.title || "Redefining\nEpilepsy Care";
   const subtitle = data?.subtitle || "Advanced diagnostics, world-class epilepsy surgery, AI-powered support, and a nationwide network dedicated to helping people live seizure-free.";
   const bgRef = useRef<HTMLDivElement>(null);
 
@@ -59,7 +59,7 @@ const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
             <div className="flex flex-col items-start text-left space-y-6 max-w-full md:max-w-[60%]">
 
               {/* Heading */}
-              <h1 className="h1 font-bold tracking-tight text-white mb-2 drop-shadow-md leading-[1.1]">
+              <h1 className="h1 font-bold tracking-tight text-white mb-2 drop-shadow-md leading-[1.1] whitespace-pre-line">
                 {title}
               </h1>
 

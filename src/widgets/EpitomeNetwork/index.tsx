@@ -277,7 +277,7 @@ const EpitomeNetwork: React.FC = () => {
     });
 
   return (
-    <section id="network" className="relative z-10 h-[680px] sm:h-auto sm:min-h-screen bg-white text-neutral-900 py-10 sm:py-20 flex flex-col items-center justify-center overflow-hidden font-sans">
+    <section id="network" className="relative z-10 h-[680px] sm:h-auto sm:min-h-screen lg:min-h-[120vh] xxl:min-h-screen bg-white text-neutral-900 py-10 sm:py-20 flex flex-col items-center justify-center overflow-hidden font-sans">
       {/* Light Radial background glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-50/50 rounded-full blur-[140px] pointer-events-none" />
 

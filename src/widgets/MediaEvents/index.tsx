@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import SmokeTitle from "@/src/components/UI/SmokeTitle";
 import Button from "@/src/components/UI/Button";
 import { useToggleLenis } from "@/src/logic/useToggleLenis";
@@ -10,7 +10,6 @@ import { useToggleLenis } from "@/src/logic/useToggleLenis";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import styles from "./MediaEvents.module.scss";
 
 interface EventItem {
@@ -186,7 +185,7 @@ const MediaEvents: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 lg:mb-16 gap-6">
           <div className="max-w-xl">
             <SmokeTitle
               tag="h2"
@@ -198,25 +197,7 @@ const MediaEvents: React.FC = () => {
             </p>
           </div>
 
-          {/* Custom navigation arrows */}
-          <div className="hidden md:flex gap-2">
-            <button
-              onClick={() => swiperRef.current?.slidePrev()}
-              className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/80 hover:text-white transition-all cursor-pointer"
-            >
-              <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              onClick={() => swiperRef.current?.slideNext()}
-              className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/80 hover:text-white transition-all cursor-pointer"
-            >
-              <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+
         </div>
 
         {/* Tab Filters */}
@@ -229,8 +210,8 @@ const MediaEvents: React.FC = () => {
                 swiperRef.current?.slideTo(0);
               }}
               className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap border transition-all cursor-pointer ${activeTab === tab.value
-                  ? "bg-[#E1B77E] border-[#E1B77E] text-neutral-950"
-                  : "bg-white/5 border-white/10 text-white/70 hover:text-white hover:border-white/30"
+                ? "bg-[#E1B77E] border-[#E1B77E] text-neutral-950"
+                : "bg-white/5 border-white/10 text-white/70 hover:text-white hover:border-white/30"
                 }`}
             >
               {tab.label}
@@ -241,7 +222,7 @@ const MediaEvents: React.FC = () => {
         {/* Swiper Slider */}
         <div className="relative overflow-visible">
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
             grabCursor={true}
@@ -252,7 +233,6 @@ const MediaEvents: React.FC = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 }
             }}
-            pagination={{ clickable: true, el: ".swiper-custom-pagination" }}
             className="!overflow-visible"
           >
             {filteredData.map((item) => (
@@ -357,8 +337,34 @@ const MediaEvents: React.FC = () => {
             ))}
           </Swiper>
 
-          {/* Swiper Pagination dots */}
-          <div className="swiper-custom-pagination flex justify-center gap-1.5 mt-8" />
+        </div>
+
+        {/* Bottom Controls */}
+        <div className="flex justify-between items-center mt-8">
+          {/* Custom navigation arrows (left aligned) */}
+          <div className="flex gap-2">
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/80 hover:text-white transition-all cursor-pointer"
+            >
+              <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/80 hover:text-white transition-all cursor-pointer"
+            >
+              <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* View All Button */}
+          <Button variant="outline-white" size="md">
+            View All
+          </Button>
         </div>
 
       </div>

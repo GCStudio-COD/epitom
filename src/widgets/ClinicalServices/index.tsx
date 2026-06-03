@@ -13,72 +13,31 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     title: "Drug-resistant epilepsy",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-[#E1B77E]">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="M12 8v5M12 16h.01" strokeWidth="2" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: <img src="/icons/Drug-Resistant%20Epilepsy.svg" alt="Drug-resistant epilepsy" className="w-16 h-16 object-contain" />
   },
   {
     title: "Pediatric epilepsy",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-[#E1B77E]">
-        <circle cx="12" cy="7" r="3" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 10c-3 0-5 2-5 5v5h10v-5c0-3-2-5-5-5z" />
-        <path d="M19 4l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" stroke="none" />
-      </svg>
-    ),
+    icon: <img src="/icons/Pediatric%20Epilepsy.svg" alt="Pediatric epilepsy" className="w-16 h-16 object-contain" />
   },
   {
     title: "Epilepsy surgery",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-[#E1B77E]">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 2v20M2 12h20" strokeLinecap="round" />
-        <circle cx="12" cy="12" r="5" fill="none" />
-        <circle cx="12" cy="12" r="2" fill="currentColor" />
-      </svg>
-    ),
+    icon: <img src="/icons/Epilepsy%20Surgery.svg" alt="Epilepsy surgery" className="w-16 h-16 object-contain" />
   },
   {
     title: "SEEG",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-[#E1B77E]">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12h3l3-9 4 18 3-12h5" />
-        <circle cx="9" cy="3" r="1.5" fill="currentColor" />
-        <circle cx="13" cy="21" r="1.5" fill="currentColor" />
-      </svg>
-    ),
+    icon: <img src="/icons/SEEG.svg" alt="SEEG" className="w-16 h-16 object-contain" />
   },
   {
     title: "Neuro-modulation",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-[#E1B77E]">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        <path d="M4 6c1-1.5 3-1.5 4 0s3 1.5 4 0 3-1.5 4 0" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: <img src="/icons/Neuro-modulation.svg" alt="Neuro-modulation" className="w-16 h-16 object-contain" />
   },
   {
     title: "Rehabilitation",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-[#E1B77E]">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 20h4v-4h4v-4h4v-4h4" />
-        <circle cx="18" cy="4" r="2" fill="currentColor" />
-      </svg>
-    ),
+    icon: <img src="/icons/Rehabilitation.svg" alt="Rehabilitation" className="w-16 h-16 object-contain" />
   },
   {
     title: "Ketogenic therapy",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-[#E1B77E]">
-        <circle cx="6" cy="18" r="3" />
-        <circle cx="18" cy="18" r="3" />
-        <circle cx="12" cy="6" r="3" />
-        <path d="M8.5 16.5l2-8M15.5 16.5l-2-8" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: <img src="/icons/Ketogenic%20Therapy.svg" alt="Ketogenic therapy" className="w-16 h-16 object-contain" />
   },
 ];
 
@@ -121,7 +80,7 @@ const ClinicalServices: React.FC = () => {
     <section
       ref={sectionRef}
       id="services"
-      className="relative z-5 [clip-path:inset(0)] w-full bg-white text-neutral-900 h-[50vh] min-h-[450px] lg:h-[70vh] flex flex-col justify-center font-sans overflow-hidden"
+      className="relative z-5 [clip-path:inset(0)] w-full bg-white text-neutral-900 h-[50vh] min-h-[450px] lg:h-[95vh] xxl:h-[70vh] flex flex-col justify-center font-sans overflow-hidden"
     >
       {/* Light ambience glows */}
       <div className="absolute inset-0 bg-[radial-gradient(#00000002_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
