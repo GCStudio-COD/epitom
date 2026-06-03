@@ -48,8 +48,7 @@ const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
           backgroundImage: `url('/banner.jpeg')`,
         }}
       />
-      {/* Premium dark medical-gradient overlay for rich depth and contrast */}
-      <div className="absolute inset-0 bg-linear-to-r from-neutral-950 via-neutral-900/80 to-transparent z-1" />
+
       <div className="absolute inset-0 bg-neutral-950/20 z-1" />
 
       {/* Content wrapper - left aligned */}
