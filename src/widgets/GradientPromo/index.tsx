@@ -10,6 +10,8 @@ const GradientPromo = () => {
   const epiluRef = useRef<HTMLDivElement>(null);
   const nurveRef = useRef<HTMLImageElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
+  const meetTextRef = useRef<HTMLHeadingElement>(null);
+  const svgTextContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -38,12 +40,20 @@ const GradientPromo = () => {
         y: 50,
       });
 
+      gsap.set([meetTextRef.current, svgTextContainerRef.current], {
+        opacity: 0,
+        y: -30,
+        filter: "blur(12px)",
+      });
+
       // Non-scrubbed entry timeline for Epilu and Nurve
       const entryTl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
           toggleActions: "play none none reverse",
+          onEnter: () => {},
+          onLeaveBack: () => {}
         }
       });
 
@@ -63,6 +73,13 @@ const GradientPromo = () => {
           opacity: 1,
           scale: 1,
           y: 0,
+          duration: 1.2,
+          ease: "power2.out",
+        }, "<")
+        .to([meetTextRef.current, svgTextContainerRef.current], {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
           duration: 1.2,
           ease: "power2.out",
         }, "<"); // Start at the same time as Epilu
@@ -110,32 +127,81 @@ const GradientPromo = () => {
 
   return (
     <section ref={sectionRef} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[linear-gradient(to_right,var(--color-secondary)_0%,var(--color-primary)_60%)]">
+      {/* Top Center Epilu Text */}
+      <div className="absolute top-[30px] md:top-[50px] left-0 w-full flex flex-col items-center justify-center z-20 pointer-events-none gap-4">
+        <h2 ref={meetTextRef} className="text-3xl md:text-3xl font-normal text-white tracking-wide">Meet.</h2>
+        <div ref={svgTextContainerRef} className="w-[80%] sm:w-[50%] md:w-[19%] lg:w-[19%] xxl:w-[25%] flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" id="Layer_1" version="1.1" viewBox="0 0 1098.9 476.6" className="w-full h-auto object-contain">
+            <defs>
+              <style>
+                {`
+                  .epilu-st0, .epilu-st1, .epilu-st2 {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-miterlimit: 10;
+                  }
+
+                  .epilu-st0, .epilu-st2 {
+                    stroke-width: 81px;
+                  }
+
+                  .epilu-st1 {
+                    stroke-width: 75px;
+                  }
+
+                  .epilu-st3 {
+                    fill: #fff;
+                  }
+
+                  .epilu-st2 {
+                    stroke-linecap: round;
+                  }
+                `}
+              </style>
+            </defs>
+            <g id="qWvQj4.tif">
+              <image id="Layer_11" data-name="Layer_1" width="776" height="303" transform="translate(1395.4 445.5)" xlinkHref="Epilu text-1.png" />
+            </g>
+            <polyline className="epilu-st1" points="232.1 54.6 43.9 54.6 43.9 330.8 234.1 330.8" />
+            <line className="epilu-st1" x1="233.1" y1="194.3" x2="61.1" y2="194.3" />
+            <line className="epilu-st1" x1="319.6" y1="89.5" x2="319.6" y2="469.5" />
+            <line className="epilu-st1" x1="589.4" y1="99.9" x2="589.4" y2="372.8" />
+            <line className="epilu-st2" x1="587.9" y1="44.6" x2="588.7" y2="44" />
+            <line className="epilu-st1" x1="704" y1="18.6" x2="704" y2="372.8" />
+            <line className="epilu-st2" x1="816.6" y1="139" x2="817.4" y2="138.4" />
+            <path className="epilu-st0" d="M815.9,199.9v22.8c0,59.6,51.8,107.9,115.8,107.9h0c63.9,0,115.8-48.3,115.8-107.9v-26" />
+            <line className="epilu-st2" x1="1047.8" y1="138.6" x2="1047.4" y2="138.8" />
+            <path className="epilu-st3" d="M340.9,176.9c2.1-24.2,13.1-47.5,32-64.1,16.3-14.4,39.5-21.2,61.2-19.1,41.8,3.7,70,29.2,84.7,67.4,13.5,36.3,14.2,74.5,8.4,112.1-2.4,14-5.4,27.4-11.8,40.4-10.5,21.5-29.1,39.2-51.4,48.2-21,8.5-44.8,7.6-65.5.4-25.8-8.6-48.2-27.5-55.4-54.3-2.5-8.9-3.1-17.5-3-26.5,0-2.6.3-5.9,0-8.4,4.1,4,6.9,9.1,10.4,13.4,8.3,11.4,20.3,21.9,32.8,25.6,13.6,4.3,33.3,4.7,46.4-1,8.3-3.7,13.9-10.1,18.1-17.8,3.6-7,4.6-15.1,5.5-23.1,1.3-11.5,2-23.3,2.2-34.9.2-23.3-.8-54.4-13.3-74.3-1.8-2.7-3.9-5.1-6.4-7.2-6.9-4.8-14.4-8.7-22-10.4-27.1-6-53.9,15.6-73,33.6h0Z" />
+          </svg>
+        </div>
+      </div>
+
       {/* Background Frames */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <img src="/groups/bg_frame_01.png" alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div ref={frame3Ref} style={{ opacity: 0 }} className="absolute inset-0 w-full h-full pointer-events-none">
+      <div ref={frame3Ref} style={{ opacity: 0 }} className="absolute inset-0 w-full h-full pointer-events-none will-change-transform">
         <img src="/groups/bg_frame_03.png" alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div ref={frame4Ref} style={{ opacity: 0 }} className="absolute inset-0 w-full h-full pointer-events-none">
+      <div ref={frame4Ref} style={{ opacity: 0 }} className="absolute inset-0 w-full h-full pointer-events-none will-change-transform">
         <img src="/groups/bg_frame_04.png" alt="" className="w-full h-full object-cover" />
       </div>
 
 
 
-      <div ref={epiluRef} style={{ opacity: 0 }} className="absolute bottom-[-130px] lg:bottom-[-110px] xxl:bottom-[-130px] left-0 w-full flex justify-center items-end z-10 pointer-events-none">
+      <div ref={epiluRef} style={{ opacity: 0 }} className="absolute bottom-[-130px] lg:bottom-[-90px] xxl:bottom-[-130px] left-0 w-full flex justify-center items-end z-10 pointer-events-none will-change-transform">
         <img
           src="/groups/epilu.png"
           alt="Epilu"
-          className="w-[70%] md:w-[48%] object-contain relative z-10"
+          className="w-[70%] md:w-[40%] xxl:w-[48%] object-contain relative z-10"
         />
         <img
           ref={nurveRef}
           src="/groups/nerve.png"
           alt="Nurve"
-          className="absolute w-[40%] md:w-[8%] object-contain z-10 top-[23%] right-[25%]"
+          className="absolute w-[40%] md:w-[7%] xxl:w-[8%] object-contain z-10 top-[23%] right-[29%] xxl:top-[23%] xxl:right-[30%] will-change-transform"
           style={{ opacity: 0 }}
         />
         {/* <img
@@ -143,7 +209,7 @@ const GradientPromo = () => {
           alt="Nurve"
           className="absolute w-[80%] md:w-[40%] object-contain z-0 top-[-120px] left-[50%] translate-x-[-50%]"
         /> */}
-        <div ref={headlineRef} style={{ opacity: 0 }} className="absolute w-[80%] md:w-[33%] lg:w-[40%] xxl:w-[40%] object-contain z-0 lg:top-[-100px] xxl:top-[-140px] left-[47%] translate-x-[-50%]">
+        <div ref={headlineRef} style={{ opacity: 0 }} className="absolute w-[80%] md:w-[33%] lg:w-[36%] xxl:w-[40%] object-contain z-0 lg:top-[-90px] xxl:top-[-140px] left-[47%] translate-x-[-50%] will-change-transform">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" viewBox="0 0 779 347" fill="none">
             <defs>
               <linearGradient id="flowing-gradient" x1="0%" y1="0%" x2="200%" y2="0%">

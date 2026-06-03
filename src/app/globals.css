@@ -27,9 +27,9 @@
   --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-anton: var(--font-anton);
+  --font-sans: var(--font-axiforma);
+  --font-mono: var(--font-axiforma);
+  --font-anton: var(--font-axiforma);
 
   /* Custom Breakpoint */
   --breakpoint-xxxl: 120rem;
@@ -63,19 +63,36 @@
 body {
   /* background: var(--background); */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-axiforma), sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 25s linear infinite;
 }
 
 
 @utility btn-primary {
+  font-family: var(--font-axiforma);
   @apply border inline-flex items-center justify-center font-semibold text-sm px-[35px] py-2.5 rounded-[300px] bg-primary text-white border border-primary transition-all duration-300 shadow-md hover:bg-transparent hover:text-primary hover:border-primary active:scale-98 cursor-pointer;
 }
 
 @utility btn-secondary {
+  font-family: var(--font-axiforma);
   @apply inline-flex items-center justify-center font-semibold text-sm px-[35px] py-2.5 rounded-[300px] border border-neutral-300 text-black bg-transparent hover:bg-neutral-50 transition-all duration-300 active:scale-98 cursor-pointer;
 }
 
 @utility btn-outline-white {
+  font-family: var(--font-axiforma);
   @apply inline-flex items-center justify-center font-semibold text-sm px-[45px] py-[15px] rounded-[300px] border border-white text-white bg-transparent hover:bg-white hover:text-neutral-950 transition-all duration-300 active:scale-98 cursor-pointer;
 }
 

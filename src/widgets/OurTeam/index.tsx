@@ -12,9 +12,9 @@ interface TeamMember {
 }
 
 const TEAM_DATA: TeamMember[] = [
-  { 
-    id: "member-1", 
-    name: "Dr. Sachin Sureshbabu", 
+  {
+    id: "member-1",
+    name: "Dr. Sachin Sureshbabu",
     image: "/team/01.png",
     position: [
       "HOD & Senior Consultant - Neurology",
@@ -24,9 +24,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-2", 
-    name: "Dr. Tushar V P", 
+  {
+    id: "member-2",
+    name: "Dr. Tushar V P",
     image: "/team/02.png",
     position: [
       "Senior Consultant - Neurologist and Epileptologist",
@@ -34,9 +34,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-3", 
-    name: "Dr. Krishnadas NC", 
+  {
+    id: "member-3",
+    name: "Dr. Krishnadas NC",
     image: "/team/03.png",
     position: [
       "Senior Consultant",
@@ -44,9 +44,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-4", 
-    name: "Dr. Deep P Pillai", 
+  {
+    id: "member-4",
+    name: "Dr. Deep P Pillai",
     image: "/team/04.png",
     position: [
       "Senior Consultant - Stroke and Interventional Neurology",
@@ -54,25 +54,25 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-5", 
-    name: "Dr Anchu Cherian", 
+  {
+    id: "member-5",
+    name: "Dr Anchu Cherian",
     image: "/team/05.png",
     position: [
       "Pediatric Neurologist"
     ]
   },
-  { 
-    id: "member-6", 
-    name: "Dr Amrutha", 
+  {
+    id: "member-6",
+    name: "Dr Amrutha",
     image: "/team/06.png",
     position: [
       "Epilepsy Fellow"
     ]
   },
-  { 
-    id: "member-7", 
-    name: "Dr. Nilesh Shaligram Kurwale", 
+  {
+    id: "member-7",
+    name: "Dr. Nilesh Shaligram Kurwale",
     image: "/team/07.png",
     position: [
       "Senior consultant - Epilepsy Surgery",
@@ -80,9 +80,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-8", 
-    name: "Dr. Rajeev MP", 
+  {
+    id: "member-8",
+    name: "Dr. Rajeev MP",
     image: "/team/08.png",
     position: [
       "HOD & Senior Consultant",
@@ -90,9 +90,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-9", 
-    name: "Dr. RAJESH KRISHNA P", 
+  {
+    id: "member-9",
+    name: "Dr. RAJESH KRISHNA P",
     image: "/team/09.png",
     position: [
       "Senior Consultant - Brain, Spine & Peripheral Nerve Surgery",
@@ -100,9 +100,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-10", 
-    name: "Dr. Akhil Mohandas", 
+  {
+    id: "member-10",
+    name: "Dr. Akhil Mohandas",
     image: "/team/10.png",
     position: [
       "Senior Consultant – Brain & Spine Surgery",
@@ -110,9 +110,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-11", 
-    name: "Dr. Sunil V. Nair", 
+  {
+    id: "member-11",
+    name: "Dr. Sunil V. Nair",
     image: "/team/11.png",
     position: [
       "HOD & Senior Consultant",
@@ -120,33 +120,33 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-12", 
-    name: "Ms Evi Dirks", 
+  {
+    id: "member-12",
+    name: "Ms Evi Dirks",
     image: "/team/13.png",
     position: [
       "Research Lead"
     ]
   },
-  { 
-    id: "member-13", 
-    name: "Ms Gilna P", 
+  {
+    id: "member-13",
+    name: "Ms Gilna P",
     image: "/team/14.png",
     position: [
       "Head of Neurophysiology"
     ]
   },
-  { 
-    id: "member-14", 
-    name: "Ms Sruthi", 
+  {
+    id: "member-14",
+    name: "Ms Sruthi",
     image: "/team/12.png",
     position: [
       "Neuropsychologist"
     ]
   },
-  { 
-    id: "member-15", 
-    name: "Dr. Noushif M", 
+  {
+    id: "member-15",
+    name: "Dr. Noushif M",
     image: "/team/16.png",
     position: [
       "Senior Consultant",
@@ -154,9 +154,9 @@ const TEAM_DATA: TeamMember[] = [
       "Meitra Hospital"
     ]
   },
-  { 
-    id: "member-16", 
-    name: "Dr. Mahesh BS", 
+  {
+    id: "member-16",
+    name: "Dr. Mahesh BS",
     image: "/team/15.png",
     position: [
       "Director",
@@ -168,7 +168,7 @@ const TEAM_DATA: TeamMember[] = [
 
 const OurTeam: React.FC = () => {
   return (
-    <section id="team" className="relative py-24 bg-white text-neutral-900 overflow-hidden font-sans">
+    <section id="team" className="relative py-24 pb-[50px] bg-white text-neutral-900 overflow-hidden font-sans">
       {/* Light Radial Backdrop glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-50/60 rounded-full blur-[140px] pointer-events-none" />
 
@@ -184,7 +184,7 @@ const OurTeam: React.FC = () => {
             className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-4"
             text="Our Epilepsy [Experts]"
           />
-          <p className="text-sm md:text-base text-neutral-500 font-light leading-relaxed">
+          <p className="text-sm md:text-lg text-neutral-500 font-light leading-relaxed">
             Collaborating across disciplines to deliver world-class surgical, medical, dietary, and neuromodulation therapies.
           </p>
         </div>

@@ -49,7 +49,8 @@ const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
         }}
       />
 
-      <div className="absolute inset-0 bg-neutral-950/20 z-1" />
+      {/* Subtle Dark Overlay for Text Legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-1 pointer-events-none" />
 
       {/* Content wrapper - left aligned */}
       <div className="absolute inset-0 flex flex-col justify-end pb-20 md:pb-20 z-10 [&>.container]:my-0">

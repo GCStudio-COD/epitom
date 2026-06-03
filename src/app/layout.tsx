@@ -1,24 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Anton } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import "../styles/main.scss";
 import CommonLayout from "../layout/CommonLayout";
 import LenisScroll from "../components/LenisScroll";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const anton = Anton({
-  variable: "--font-anton",
-  weight: "400",
-  subsets: ["latin"],
+const axiforma = localFont({
+  src: [
+    {
+      path: "../../public/font/Axiforma-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Axiforma-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-axiforma",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} h-full antialiased`}
+      className={`${axiforma.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col body">
 

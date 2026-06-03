@@ -340,56 +340,17 @@ const EpitomeNetwork: React.FC = () => {
         {/* 3. The Core Logo Triangle (Pure Inline CSS Styled HTML Wrapper) */}
         <div className="relative w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] z-10 flex flex-col items-center justify-center">
           {/* Header Texts */}
-          <h2 className="h2 absolute top-[-40px] sm:top-[-65px] text-center w-full font-bold tracking-tight text-neutral-900 leading-none py-2 sm:py-3 bg-[linear-gradient(to_right,_transparent_0%,_white_25%,_white_75%,_transparent_100%)]">
-            <span className="text-xl sm:text-2xl font-light tracking-wide text-neutral-500 font-sans block mb-1">The</span>
+          <h2 className="h2 absolute top-[-40px] sm:top-[-100px] text-center w-full font-bold tracking-tight text-neutral-900 leading-none py-2 sm:py-3 bg-[linear-gradient(to_right,_transparent_0%,_white_25%,_white_75%,_transparent_100%)]">
+            <span className="text-xl sm:text-2xl lg:text-4xl font-light tracking-wide text-neutral-500 font-sans block mb-1">The</span>
             <span className="block">Epitome</span>
           </h2>
 
-          {/* Center Graphic Triangle */}
-          <svg viewBox="0 0 500 500" className="w-[120px] h-[120px] sm:w-[220px] sm:h-[220px]">
-            <g transform="translate(0, 40)">
-              {/* Triangle Clipping Block */}
-              <g clipPath="url(#logo-triangle-clip)">
-                {/* Layer 1 (bottom light base) */}
-                <path d="M 50 350 L 450 350 L 450 290 Q 250 310, 50 290 Z" fill="#eae2f1" />
-                {/* Layer 2 */}
-                <path d="M 50 295 L 450 295 L 450 230 Q 250 250, 50 230 Z" fill="#c3a2d5" />
-                {/* Layer 3 */}
-                <path d="M 50 235 L 450 235 L 450 170 Q 250 190, 50 170 Z" fill="#9c63b7" />
-                {/* Layer 4 */}
-                <path d="M 50 175 L 450 175 L 450 120 Q 250 140, 50 120 Z" fill="#752e9a" />
-                {/* Layer 5 (apex) */}
-                <path d="M 50 125 L 450 125 L 250 50 Z" fill="#572a65" />
-
-                {/* Glowing Sun at Apex */}
-                <circle cx="250" cy="120" r="28" fill="url(#sun-glow)" />
-                <circle cx="250" cy="120" r="10" fill="white" className="shadow-lg" />
-
-                {/* Curved Pathway */}
-                <path
-                  d="M 250 345 C 220 300, 180 260, 260 210 C 310 165, 270 140, 250 120"
-                  stroke="url(#road-grad)"
-                  strokeWidth="10"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M 250 345 C 220 300, 180 260, 260 210 C 310 165, 270 140, 250 120"
-                  stroke="white"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </g>
-
-              {/* Dark crisp border overlay around the triangle */}
-              <polygon points="250,75 410,345 90,345" fill="none" stroke="#572a65" strokeWidth="6" strokeLinejoin="round" />
-            </g>
-          </svg>
+          {/* Center Graphic */}
+          <img src="/Epitom.svg" alt="Epitome Center" className="w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] object-contain drop-shadow-xl" />
 
           {/* Subtitle Labels below Logo */}
           <div className="absolute bottom-[-20px] sm:bottom-[-40px] text-center w-full flex items-center justify-center gap-1.5 sm:gap-2 text-neutral-800">
-            <span className="text-lg sm:text-2xl font-bold tracking-wider font-sans uppercase">Epitome</span>
+            <span className="text-xl sm:text-3xl font-bold tracking-wider font-sans uppercase">Epitome</span>
             <span className="text-[10px] sm:text-xs font-semibold tracking-widest text-neutral-500 uppercase whitespace-nowrap">Epilepsy Network</span>
           </div>
         </div>

@@ -10,6 +10,7 @@
   display: flex;
   width: max-content;
   animation: marqueeAnimation 100s linear infinite;
+  will-change: transform;
   
   &:hover {
     animation-play-state: paused;
@@ -41,6 +42,7 @@
   text-align: center;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .marqueeCard:hover .flipCardInner {
