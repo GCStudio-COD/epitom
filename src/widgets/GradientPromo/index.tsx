@@ -130,7 +130,7 @@ const GradientPromo = () => {
       {/* Top Center Epilu Text */}
       <div className="absolute top-[30px] md:top-[10%] left-0 w-full flex flex-col items-center justify-center z-0 pointer-events-none gap-4">
         <h2 ref={meetTextRef} className="text-3xl md:text-5xl font-light text-white tracking-wide">Meet.</h2>
-        <div ref={svgTextContainerRef} className="w-[80%] sm:w-[50%] md:w-[19%] lg:w-[22%] xxl:w-[25%] flex justify-center">
+        <div ref={svgTextContainerRef} className="w-[80%] sm:w-[50%] md:w-[19%] lg:w-[26%] xxl:w-[25%] flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" id="Layer_1" version="1.1" viewBox="0 0 1098.9 476.6" className="w-full h-auto object-contain">
             <defs>
               <style>
