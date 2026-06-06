@@ -189,10 +189,10 @@ const MediaEvents: React.FC = () => {
           <div className="max-w-xl">
             <SmokeTitle
               tag="h2"
-              className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-4"
+              className="h2 font-bold tracking-tight text-neutral-900 mb-4"
               text="Media & [Events]"
             />
-            <p className="text-sm md:text-lg text-neutral-500 font-light leading-relaxed">
+            <p className="text-sm md:text-lg text-neutral-500 font-normal leading-relaxed">
               Explore our scientific advancements, clinical workshops, video resources, participant experiences, and summits.
             </p>
           </div>

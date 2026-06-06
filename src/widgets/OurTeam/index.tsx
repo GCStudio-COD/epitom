@@ -181,10 +181,10 @@ const OurTeam: React.FC = () => {
           </span>
           <SmokeTitle
             tag="h2"
-            className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-4"
+            className="h2 font-bold tracking-tight text-neutral-900 mb-4"
             text="Our Epilepsy [Experts]"
           />
-          <p className="text-sm md:text-lg text-neutral-500 font-light leading-relaxed">
+          <p className="text-sm md:text-lg text-neutral-500 leading-relaxed font-normal">
             Collaborating across disciplines to deliver world-class surgical, medical, dietary, and neuromodulation therapies.
           </p>
         </div>

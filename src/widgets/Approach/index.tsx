@@ -81,10 +81,10 @@ const Approach: React.FC = () => {
         <div className="flex flex-col items-start text-left w-full mb-10 lg:mb-12">
           <SmokeTitle
             tag="h2"
-            className="h2 font-bold tracking-tight text-neutral-900 mb-4"
+            className="h2 font-bold text-neutral-900 mb-4"
             text={"Every [Seizure]\nHas a Path [Forward]"}
           />
-          <p className="text-base sm:text-lg text-neutral-500 font-light leading-relaxed w-full max-w-[80%]">
+          <p className="text-base sm:text-lg text-neutral-500 font-normal leading-relaxed w-full max-w-[80%]">
             From first diagnosis to advanced surgical evaluation, our structured epilepsy care pathway ensures every patient receives the right treatment at the right time.
           </p>
         </div>

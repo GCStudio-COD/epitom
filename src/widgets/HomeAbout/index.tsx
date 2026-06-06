@@ -20,7 +20,7 @@ const HomeAbout: React.FC = () => {
 
         {/* Paragraph section */}
         <div className="">
-          <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-light text-neutral-500 leading-relaxed tracking-wide">
+          <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-normal text-neutral-500 leading-relaxed tracking-wide">
             Comprehensive epilepsy care powered by advanced technology, expert specialists, and evidence-based treatment pathways.
           </p>
         </div>

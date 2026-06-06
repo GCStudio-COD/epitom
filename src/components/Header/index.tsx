@@ -48,7 +48,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled ? "bg-gradient-to-b from-[#6e4e47] to-transparent py-4" : "bg-transparent py-6"} ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled ? "bg-gradient-to-b from-black to-transparent py-4" : "bg-transparent py-6"} ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
       >
         <div className="container flex items-center justify-between w-full">
           {/* Logo */}

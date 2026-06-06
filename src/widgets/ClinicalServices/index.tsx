@@ -78,7 +78,7 @@ const ClinicalServices: React.FC = () => {
             className="h2 font-bold tracking-tight text-neutral-900 mb-4"
             text="Clinical [Services]"
           />
-          <p className="text-base sm:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-lg text-neutral-500 font-normal leading-relaxed max-w-3xl">
             Delivering comprehensive epilepsy care through clinical excellence, advanced diagnostics, research, education, and global collaboration.
           </p>
         </div>
